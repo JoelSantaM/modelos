@@ -6,10 +6,15 @@
 <body>
     <h1>Lista de Clientes</h1>
     <ul>
-        {% for cliente in clientes}
+        {% for cliente in clientes %}
             <li>{{ cliente.nombre }} - {{ cliente.email }} - {{ cliente.telefono }}</li>
         {% endfor %}
-
     </ul>
+      <!-- Enlace para agregar un nuevo cliente -->
+  <a href="{% url 'agregar_cliente' %}">Agregar Nuevo Cliente</a>
+  <!-- Enlace para ver la lista de productos -->
+  <a href="{% url 'listar_productos' %}">Ver Productos</a>
+  <a href="{% url 'inicio' %}">Volver a inicio</a>
+
 </body>
 </html>
