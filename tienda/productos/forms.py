@@ -1,5 +1,6 @@
 from django import forms
 from .models import Producto, Cliente
+from django.contrib.auth.forms import UserCreationForm
 
 # class Productoforms(forms.Form):
 #     nombre = forms.CharField(max_length=100)
@@ -23,3 +24,10 @@ class ClienteModelForm(forms.ModelForm):
     class Meta:
         model = Cliente
         fields = ['nombre', 'email', 'telefono']
+
+class RegistroUsuarioForm(UserCreationForm):
+    email = forms.EmailField(required=True)
+
+    class Meta:
+        model = Cliente
+        fields = ['username', 'email', 'password1', 'password2']

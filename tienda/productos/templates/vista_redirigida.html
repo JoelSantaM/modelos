@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vista Restringida</title>
+</head>
+<body>
+    <h1>Acceso Restringido</h1>
+    <p>Solo los usuarios autenticados pueden ver esta
+página.</p>
+    <a href="{% url 'logout' %}">Cerrar Sesión</a> 
+    <a href="{% url 'inicio' %}">
+        <button>Volver a Inicio</button>
+    </a>
+</body>
+</html>
